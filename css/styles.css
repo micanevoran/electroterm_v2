@@ -115,7 +115,7 @@ button {
 
 .display-medium {
     font-family: var(--font-display);
-    font-size: 1.5rem; /* Mobile: 24.5px */
+    font-size: 1.8rem; /* Mobile: 24.5px */
     font-weight: 700;
     letter-spacing: -0.01em;
     line-height: 1.15;
@@ -157,7 +157,7 @@ button {
 
 .label-large {
     font-family: var(--font-technical);
-    font-size: 1rem;
+    font-size: 0.9rem;
     font-weight: 500;
     letter-spacing: 0.12em;
     text-transform: uppercase;
@@ -165,15 +165,15 @@ button {
 
 .label-small {
     font-family: var(--font-technical);
-    font-size: 0.8rem;
+    font-size: 0.7rem;
     font-weight: 500;
-    letter-spacing: 0.15em;
+    letter-spacing: 0.09em;
     text-transform: uppercase;
 }
 
 .technical-data {
     font-family: var(--font-technical);
-    font-size: 1rem;
+    font-size: 0.9rem;
     font-weight: 400;
 }
 
@@ -565,7 +565,7 @@ button {
     background: transparent;
     border: 2px solid var(--neutral-warm);
     font-family: var(--font-technical);
-    font-size: 0.7rem;
+    font-size: 0.9rem;
     letter-spacing: 0.12em;
     text-transform: uppercase;
     cursor: pointer;
@@ -682,12 +682,13 @@ button {
 }
 
 .filter-btn {
-    padding: 0.75rem 1rem;
+    width: 30vw;
+    padding: 0.75rem 0.75rem;
     background: transparent;
     border: 1px solid rgba(255, 255, 255, 0.3);
     color: var(--white);
     font-family: var(--font-technical);
-    font-size: 0.65rem;
+    font-size: 0.8rem;
     letter-spacing: 0.12em;
     text-transform: uppercase;
     cursor: pointer;
@@ -726,13 +727,19 @@ button {
     font-size: 0.75rem;
 }
 
+.project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
 .project-content {
     padding: var(--space-md);
 }
 
 .project-label {
+    padding: 1.5vh 0;
     color: var(--accent-cyan);
-    margin-bottom: var(--space-xs);
 }
 
 .project-title {
@@ -789,11 +796,20 @@ button {
 
 .capability-label {
     color: var(--neutral-dark);
+    font-size: 0.8rem;
 }
 
 .capabilities-list {
     background: var(--white);
     padding: var(--space-lg);
+}
+
+.capabilities-list h3{
+    font-size: 1.8rem;
+}
+
+.capabilities-list li{
+    font-size: 1.1rem;
 }
 
 .capabilities-list h3 {
@@ -843,7 +859,7 @@ button {
 
 .contact-info h3 {
     font-family: var(--font-display);
-    font-size: 1.25rem;
+    font-size: 1.5rem;
     margin-bottom: var(--space-md);
 }
 
@@ -855,13 +871,14 @@ button {
 }
 
 .contact-icon {
-    font-size: 1.25rem;
-    color: var(--accent-cyan);
+    width: 24px;
+    height: 24px;
+    fill: var(--accent-cyan);
 }
 
 .contact-details h4 {
     font-family: var(--font-technical);
-    font-size: 0.7rem;
+    font-size: 1rem;
     letter-spacing: 0.12em;
     text-transform: uppercase;
     margin-bottom: var(--space-xs);
@@ -870,7 +887,7 @@ button {
 
 .contact-details p {
     color: rgba(255, 255, 255, 0.9);
-    font-size: 0.9375rem;
+    font-size: 1rem;
 }
 
 .contact-form {
@@ -886,7 +903,7 @@ button {
 .form-label {
     display: block;
     font-family: var(--font-technical);
-    font-size: 0.7rem;
+    font-size: 0.9rem;
     letter-spacing: 0.12em;
     text-transform: uppercase;
     margin-bottom: var(--space-xs);
@@ -902,7 +919,7 @@ button {
     border: 1px solid rgba(255, 255, 255, 0.2);
     color: var(--white);
     font-family: var(--font-body);
-    font-size: 0.9375rem;
+    font-size: 0.9rem;
     transition: all var(--transition-base);
 }
 
@@ -1121,10 +1138,6 @@ button {
     }
     
     /* Grids */
-    .expertise-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: var(--space-xl);
-    }
     
     .expertise-card {
         padding: 2.5rem;
@@ -1137,9 +1150,9 @@ button {
     }
     
     .service-tab {
-        width: auto;
-        padding: 1rem 1.5rem;
-        font-size: 0.75rem;
+        width: 20vw;
+        padding: 0.5rem 0.5rem;
+        font-size: 0.8rem;
     }
     
     .service-grid {
@@ -1150,7 +1163,12 @@ button {
     .service-card-content {
         padding: 2.5rem;
     }
-    
+
+    .filter-btn {
+        width: 25vw;
+        font-size: 0.9rem;
+    }
+
     .projects-grid {
         grid-template-columns: repeat(2, 1fr);
         gap: var(--space-lg);
@@ -1163,6 +1181,18 @@ button {
     .capabilities-grid {
         grid-template-columns: repeat(3, 1fr);
         gap: var(--space-lg);
+    }
+
+    .capability-label {
+    font-size: 0.9rem;
+    }
+
+    .capabilities-list h3{
+        font-size: 1.8rem;
+    }
+
+    .capabilities-list li{
+        font-size: 1.3rem;
     }
     
     .contact-grid {
@@ -1215,7 +1245,7 @@ button {
     }
     
     .display-medium {
-        font-size: 3rem;
+        font-size: 2.5rem;
     }
     
     /* Hero */
@@ -1260,9 +1290,22 @@ button {
         font-size: 3.5rem;
     }
     
+    .service-tabs {
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 0.75rem;
+    }
+
+    .service-tab {
+        width: 15vw;
+        padding: 0.4rem 0.4rem;
+        font-size: 1rem;
+    }
+    
     .service-grid {
         grid-template-columns: repeat(3, 1fr);
-        gap: var(--space-2xl);
+        gap: var(--space-lg);
     }
     
     .service-card-content {
@@ -1273,7 +1316,16 @@ button {
         transform: translateX(8px);
         box-shadow: -8px 8px 32px rgba(43, 95, 141, 0.12);
     }
-    
+
+    .project-filters {
+    justify-content: space-between;
+    }
+
+    .filter-btn {
+        width: 15vw;
+        font-size: 0.9rem;
+    }
+
     .projects-grid {
         grid-template-columns: repeat(3, 1fr);
         gap: var(--space-xl);
@@ -1291,12 +1343,25 @@ button {
     .capability-icon {
         font-size: 2rem;
     }
-    
+   
+    .capability-label {
+    font-size: 0.8rem;
+    }
+
+    .capabilities-list h3{
+        font-size: 1.5rem;
+    }
+
     .capabilities-list ul {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: var(--space-sm);
     }
+
+    .capabilities-list li{
+        font-size: 1.1rem;
+    }
+    
     
     .footer-grid {
         grid-template-columns: 2fr 1fr 1fr 1.5fr;
@@ -1320,10 +1385,41 @@ button {
         max-width: 1280px;
     }
     
+    .display-medium {
+        font-size: 3rem;
+    }
+    
     .display-large {
         font-size: 4.5rem;
     }
     
+    .service-tab {
+        width: 20vw;
+        padding: 0.4rem 0.4rem;
+        font-size: 1.1rem;
+    }
+
+    .project-filters {
+    justify-content: space-between;
+    }
+
+    .filter-btn {
+        width: 15vw;
+        font-size: 1rem;
+    }
+
+    .capability-label {
+    font-size: 0.9rem;
+    }
+
+    .capabilities-list h3{
+        font-size: 1.8rem;
+    }
+
+    .capabilities-list li{
+        font-size: 1.3rem;
+    }
+
     .expertise-grid,
     .service-grid,
     .projects-grid {
@@ -1352,6 +1448,11 @@ button {
     
     .display-large {
         font-size: 5rem;
+    }
+
+    .filter-btn {
+        width: 12vw;
+        font-size: 1rem;
     }
     
     .expertise,
