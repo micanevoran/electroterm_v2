@@ -1,0 +1,746 @@
+/* =====================================================
+   ELECTROTERM - RESPONSIVE STYLES
+   Mobile-First Approach
+   Version: 1.0
+===================================================== */
+
+/* =====================================================
+   BASE MOBILE STYLES (< 768px)
+===================================================== */
+
+/* Asegurar que elementos base funcionen en móvil */
+html {
+  font-size: 14px; /* Reducido para móvil */
+}
+
+.container {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+/* Navegación móvil */
+.nav-menu {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 80%;
+  max-width: 300px;
+  height: 100vh;
+  background: var(--primary-blue-dark);
+  flex-direction: column;
+  padding: 6rem 2rem 2rem;
+  transition: right 0.3s ease;
+  z-index: 999;
+  box-shadow: -4px 0 24px rgba(0, 0, 0, 0.2);
+}
+
+.nav-menu.active {
+  right: 0;
+}
+
+.mobile-toggle {
+  display: block;
+  font-size: 1.5rem;
+  color: var(--white);
+  cursor: pointer;
+  z-index: 1000;
+  position: relative;
+}
+
+/* Hero ajustes móvil */
+.hero {
+  min-height: 60vh;
+  padding-top: 5rem;
+}
+
+.hero-content {
+  padding: 2rem 1rem;
+}
+
+.hero-cta {
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.hero-cta .btn {
+  width: 100%;
+  justify-content: center;
+}
+
+/* Grids en móvil - single column */
+.expertise-grid,
+.service-grid,
+.projects-grid,
+.capabilities-grid,
+.footer-grid {
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+/* Cards con padding reducido */
+.expertise-card,
+.service-card,
+.project-card {
+  padding: 1.5rem;
+}
+
+/* Service tabs en vertical */
+.service-tabs {
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.service-tab {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  font-size: 0.7rem;
+}
+
+/* Contact grid single column */
+.contact-grid {
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+/* Formularios más compactos */
+.form-input,
+.form-select,
+.form-textarea {
+  padding: 0.875rem;
+  font-size: 0.9375rem;
+}
+
+.btn {
+  padding: 0.875rem 1.5rem;
+  font-size: 0.9375rem;
+}
+
+/* Secciones con padding reducido */
+section {
+  padding: 3rem 1rem;
+}
+
+/* Ocultar elementos decorativos en móvil */
+.hero-circles .circle-2,
+.hero-circles .circle-3 {
+  display: none;
+}
+
+/* =====================================================
+   TABLET (≥ 768px)
+===================================================== */
+@media (min-width: 768px) {
+  /* Typography - tamaño normal */
+  html {
+    font-size: 16px;
+  }
+  
+  /* Layout */
+  .container {
+    max-width: 768px;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+  
+  /* ===== NAVIGATION ===== */
+  .nav-menu {
+    position: static;
+    display: flex;
+    flex-direction: row;
+    width: auto;
+    height: auto;
+    padding: 0;
+    background: transparent;
+    gap: 2rem;
+    box-shadow: none;
+  }
+  
+  .mobile-toggle {
+    display: none;
+  }
+  
+  .nav-link {
+    font-size: 0.75rem;
+  }
+  
+  /* ===== HERO ===== */
+  .hero {
+    min-height: 70vh;
+    padding-top: 0;
+  }
+  
+  .hero-content {
+    padding: 4rem 2rem;
+  }
+  
+  .hero-title {
+    font-size: 3rem;
+    max-width: 700px;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.125rem;
+    max-width: 600px;
+  }
+  
+  .hero-cta {
+    flex-direction: row;
+    gap: 1.5rem;
+  }
+  
+  .hero-cta .btn {
+    width: auto;
+  }
+  
+  /* Mostrar círculos decorativos */
+  .hero-circles .circle-2 {
+    display: block;
+  }
+  
+  /* ===== EXPERTISE ===== */
+  .expertise-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+  
+  .expertise-card {
+    padding: 2.5rem;
+  }
+  
+  .expertise-number {
+    font-size: 3rem;
+  }
+  
+  /* ===== SERVICES ===== */
+  .service-tabs {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+  
+  .service-tab {
+    width: auto;
+    padding: 1rem 1.5rem;
+    font-size: 0.75rem;
+  }
+  
+  .service-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+  
+  .service-card {
+    padding: 2.5rem;
+  }
+  
+  /* ===== PROJECTS ===== */
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+  
+  .project-filters {
+    gap: 1rem;
+  }
+  
+  /* ===== CAPABILITIES ===== */
+  .capabilities-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+  
+  /* ===== CONTACT ===== */
+  .contact-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+  }
+  
+  .form-input,
+  .form-select,
+  .form-textarea {
+    padding: 1rem;
+    font-size: 1rem;
+  }
+  
+  .btn {
+    padding: 1rem 2rem;
+    font-size: 1rem;
+  }
+  
+  /* ===== FOOTER ===== */
+  .footer-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.5rem;
+  }
+  
+  /* ===== SECTIONS ===== */
+  section {
+    padding: 4rem 2rem;
+  }
+}
+
+/* =====================================================
+   DESKTOP (≥ 1024px)
+===================================================== */
+@media (min-width: 1024px) {
+  /* Layout */
+  .container {
+    max-width: 1024px;
+  }
+  
+  /* ===== NAVIGATION ===== */
+  .nav-menu {
+    gap: 2.5rem;
+  }
+  
+  .logo-text {
+    font-size: 1.5rem;
+  }
+  
+  /* ===== HERO ===== */
+  .hero {
+    min-height: 100vh;
+  }
+  
+  .hero-content {
+    padding: 6rem 2rem;
+  }
+  
+  .hero-title {
+    font-size: 4rem;
+    max-width: 900px;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.25rem;
+    max-width: 700px;
+  }
+  
+  /* Mostrar todos los círculos */
+  .hero-circles .circle-3 {
+    display: block;
+  }
+  
+  /* ===== EXPERTISE ===== */
+  .expertise-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+  }
+  
+  .expertise-card {
+    padding: 3rem;
+  }
+  
+  .expertise-number {
+    font-size: 3.5rem;
+  }
+  
+  /* ===== SERVICES ===== */
+  .service-tabs {
+    gap: 1rem;
+  }
+  
+  .service-tab {
+    padding: 1rem 2rem;
+  }
+  
+  .service-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+  }
+  
+  .service-card {
+    padding: 3rem;
+  }
+  
+  /* ===== PROJECTS ===== */
+  .projects-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+  }
+  
+  .project-image {
+    height: 250px;
+  }
+  
+  /* ===== CAPABILITIES ===== */
+  .capabilities-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2.5rem;
+  }
+  
+  .capability-icon {
+    font-size: 2rem;
+  }
+  
+  /* ===== FOOTER ===== */
+  .footer-grid {
+    grid-template-columns: 2fr 1fr 1fr 1.5fr;
+    gap: 3rem;
+  }
+  
+  /* ===== SECTIONS ===== */
+  section {
+    padding: 6rem 2rem;
+  }
+  
+  .section-title {
+    margin-bottom: 3rem;
+  }
+}
+
+/* =====================================================
+   DESKTOP LARGE (≥ 1280px)
+===================================================== */
+@media (min-width: 1280px) {
+  /* Layout */
+  .container {
+    max-width: 1280px;
+  }
+  
+  /* ===== HERO ===== */
+  .hero-title {
+    font-size: 4.5rem;
+  }
+  
+  /* ===== GRIDS ===== */
+  .expertise-grid,
+  .service-grid,
+  .projects-grid {
+    gap: 3rem;
+  }
+  
+  .capabilities-grid {
+    gap: 3rem;
+  }
+  
+  /* ===== CARDS ===== */
+  .expertise-card,
+  .service-card {
+    padding: 3.5rem;
+  }
+  
+  /* ===== SECTIONS ===== */
+  section {
+    padding: 6rem 2rem;
+  }
+}
+
+/* =====================================================
+   DESKTOP EXTRA LARGE (≥ 1400px)
+===================================================== */
+@media (min-width: 1400px) {
+  /* Layout */
+  .container {
+    max-width: 1400px;
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+  
+  /* ===== HERO ===== */
+  .hero-title {
+    font-size: 5rem;
+  }
+  
+  .hero-content {
+    padding: 8rem 4rem;
+  }
+  
+  /* ===== SECTIONS ===== */
+  section {
+    padding: 8rem 4rem;
+  }
+  
+  /* ===== GRIDS ===== */
+  .expertise-grid,
+  .service-grid,
+  .projects-grid,
+  .capabilities-grid {
+    gap: 3.5rem;
+  }
+}
+
+/* =====================================================
+   LANDSCAPE PHONES (width > height, < 768px)
+===================================================== */
+@media (max-width: 767px) and (orientation: landscape) {
+  .hero {
+    min-height: 100vh;
+  }
+  
+  .hero-content {
+    padding: 2rem 1rem;
+  }
+  
+  .hero-title {
+    font-size: 2rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 0.9375rem;
+  }
+}
+
+/* =====================================================
+   UTILITIES RESPONSIVE
+===================================================== */
+
+/* Hide on mobile */
+.hide-mobile {
+  display: none !important;
+}
+
+@media (min-width: 768px) {
+  .hide-mobile {
+    display: block !important;
+  }
+  
+  .hide-desktop {
+    display: none !important;
+  }
+}
+
+/* Show only on mobile */
+.show-mobile {
+  display: block !important;
+}
+
+@media (min-width: 768px) {
+  .show-mobile {
+    display: none !important;
+  }
+}
+
+/* Show only on tablet */
+.show-tablet {
+  display: none !important;
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .show-tablet {
+    display: block !important;
+  }
+}
+
+/* Show only on desktop */
+.show-desktop {
+  display: none !important;
+}
+
+@media (min-width: 1024px) {
+  .show-desktop {
+    display: block !important;
+  }
+}
+
+/* =====================================================
+   PRINT STYLES
+===================================================== */
+@media print {
+  /* Ocultar elementos no imprimibles */
+  .navbar,
+  .mobile-toggle,
+  .hero-circles,
+  .btn,
+  .no-print {
+    display: none !important;
+  }
+  
+  /* Ajustar colores para impresión */
+  body {
+    background: white;
+    color: black;
+  }
+  
+  /* Evitar saltos de página en elementos */
+  .expertise-card,
+  .service-card,
+  .project-card {
+    page-break-inside: avoid;
+  }
+  
+  /* Mostrar URLs de links */
+  a[href]:after {
+    content: " (" attr(href) ")";
+  }
+}
+
+/* =====================================================
+   ACCESSIBILITY - REDUCED MOTION
+===================================================== */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  
+  .hero-circles .circle {
+    animation: none;
+  }
+}
+
+/* =====================================================
+   HIGH CONTRAST MODE
+===================================================== */
+@media (prefers-contrast: high) {
+  /* Aumentar contraste de bordes */
+  .service-card,
+  .project-card,
+  .expertise-card {
+    border: 2px solid var(--neutral-dark);
+  }
+  
+  /* Links más visibles */
+  a {
+    text-decoration: underline;
+  }
+  
+  /* Botones con borde */
+  .btn {
+    border: 2px solid currentColor;
+  }
+}
+
+/* =====================================================
+   DARK MODE (preparación futura)
+===================================================== */
+@media (prefers-color-scheme: dark) {
+  /* Aquí se pueden agregar estilos de dark mode */
+  /* Por ahora, mantener colores de marca */
+}
+
+/* =====================================================
+   FINE POINTER (mouse) vs COARSE POINTER (touch)
+===================================================== */
+
+/* Touch devices - áreas táctiles más grandes */
+@media (pointer: coarse) {
+  .btn {
+    min-height: 44px;
+    min-width: 44px;
+    padding: 1rem 2rem;
+  }
+  
+  .nav-link {
+    padding: 1rem 0.5rem;
+  }
+  
+  .service-tab {
+    min-height: 48px;
+    padding: 1rem 1.5rem;
+  }
+  
+  .filter-btn {
+    min-height: 44px;
+    padding: 0.875rem 1.5rem;
+  }
+}
+
+/* Mouse devices - hover effects mejorados */
+@media (pointer: fine) {
+  .btn:hover {
+    transform: translateY(-2px);
+  }
+  
+  .service-card:hover {
+    transform: translateX(8px);
+  }
+  
+  .project-card:hover {
+    transform: scale(1.02);
+  }
+}
+
+/* =====================================================
+   SPECIFIC COMPONENT RESPONSIVE ADJUSTMENTS
+===================================================== */
+
+/* Logo responsive */
+.logo-symbol {
+  width: 40px;
+  height: 40px;
+}
+
+@media (min-width: 768px) {
+  .logo-symbol {
+    width: 48px;
+    height: 48px;
+  }
+}
+
+/* Section titles responsive */
+.section-title {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+}
+
+/* Technical labels responsive */
+.label-large {
+  font-size: clamp(0.7rem, 2vw, 0.9rem);
+}
+
+.label-small {
+  font-size: clamp(0.65rem, 1.5vw, 0.75rem);
+}
+
+/* Service layout responsive (página servicios.html) */
+@media (min-width: 1024px) {
+  .service-layout {
+    grid-template-columns: 1fr 1.5fr;
+    gap: 4rem;
+  }
+  
+  .service-sidebar {
+    position: sticky;
+    top: 2rem;
+  }
+}
+
+@media (max-width: 1023px) {
+  .service-layout {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .service-sidebar {
+    position: static;
+  }
+}
+
+/* Feature grid responsive */
+.feature-grid {
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .feature-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .feature-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.5rem;
+  }
+}
+
+/* Spec box responsive */
+.spec-box {
+  padding: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .spec-box {
+    padding: 2rem;
+  }
+}
+
+/* =====================================================
+   FIN RESPONSIVE STYLES
+===================================================== */

@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servicios | ELECTROTERM - Instalaciones Termomecánicas</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Familjen+Grotesk:wght@300;400;500;600;700&family=Azeret+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-blue: #2B5F8D;
+            --primary-blue-dark: #1A3D5C;
+            --primary-blue-light: #4A7FA8;
+            --secondary-teal: #3B8A9C;
+            --secondary-sky: #6AAFCC;
+            --accent-cyan: #00B4D8;
+            --accent-orange: #D87941;
+            --white: #FFFFFF;
+            --neutral-light: #F5F3F0;
+            --neutral-warm: #E8E4DF;
+            --neutral-mid: #B8B4AF;
+            --neutral-dark: #2C2C2C;
+            --neutral-black: #0F0F0F;
+            --font-display: 'Syne', sans-serif;
+            --font-body: 'Familjen Grotesk', sans-serif;
+            --font-technical: 'Azeret Mono', monospace;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: var(--font-body);
+            color: var(--neutral-dark);
+            line-height: 1.7;
+            background: var(--white);
+        }
+        
+        .page-header {
+            background: linear-gradient(135deg, var(--primary-blue-dark) 0%, var(--primary-blue) 100%);
+            padding: 8rem 2rem 4rem;
+            color: var(--white);
+            text-align: center;
+        }
+        
+        .breadcrumb {
+            font-family: var(--font-technical);
+            font-size: 0.75rem;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            margin-bottom: 2rem;
+            color: rgba(255, 255, 255, 0.7);
+        }
+        
+        .breadcrumb a {
+            color: var(--accent-cyan);
+            text-decoration: none;
+        }
+        
+        .page-title {
+            font-family: var(--font-display);
+            font-size: clamp(2.5rem, 6vw, 4rem);
+            font-weight: 800;
+            letter-spacing: -0.03em;
+            margin-bottom: 1.5rem;
+        }
+        
+        .page-subtitle {
+            font-size: 1.25rem;
+            color: rgba(255, 255, 255, 0.9);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        
+        .service-section {
+            padding: 6rem 2rem;
+            border-bottom: 1px solid var(--neutral-warm);
+        }
+        
+        .service-section:nth-child(even) {
+            background: var(--neutral-light);
+        }
+        
+        .service-layout {
+            display: grid;
+            grid-template-columns: 1fr 1.5fr;
+            gap: 4rem;
+            max-width: 1400px;
+            margin: 0 auto;
+            align-items: start;
+        }
+        
+        .service-sidebar {
+            position: sticky;
+            top: 2rem;
+        }
+        
+        .service-category {
+            font-family: var(--font-technical);
+            font-size: 0.75rem;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--accent-cyan);
+            margin-bottom: 1rem;
+        }
+        
+        .service-name {
+            font-family: var(--font-display);
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary-blue-dark);
+            margin-bottom: 1.5rem;
+            letter-spacing: -0.02em;
+        }
+        
+        .service-intro {
+            font-size: 1.125rem;
+            color: var(--neutral-dark);
+            margin-bottom: 2rem;
+            line-height: 1.8;
+        }
+        
+        .spec-box {
+            background: var(--primary-blue-dark);
+            color: var(--white);
+            padding: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .spec-title {
+            font-family: var(--font-technical);
+            font-size: 0.75rem;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--accent-cyan);
+            margin-bottom: 1rem;
+        }
+        
+        .spec-grid {
+            display: grid;
+            gap: 1rem;
+        }
+        
+        .spec-item {
+            font-family: var(--font-technical);
+            font-size: 0.875rem;
+            padding: 0.75rem;
+            background: rgba(255, 255, 255, 0.05);
+            border-left: 3px solid var(--accent-cyan);
+        }
+        
+        .service-content h3 {
+            font-family: var(--font-display);
+            font-size: 1.75rem;
+            color: var(--primary-blue);
+            margin-top: 3rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .service-content h4 {
+            font-family: var(--font-display);
+            font-size: 1.25rem;
+            color: var(--neutral-dark);
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+        }
+        
+        .service-content ul {
+            list-style: none;
+            margin-bottom: 2rem;
+        }
+        
+        .service-content li {
+            padding: 0.75rem 0 0.75rem 2rem;
+            position: relative;
+            border-bottom: 1px solid var(--neutral-warm);
+        }
+        
+        .service-content li:before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: var(--accent-cyan);
+            font-weight: bold;
+        }
+        
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .feature-card {
+            background: var(--neutral-light);
+            padding: 2rem;
+            border-left: 4px solid var(--accent-cyan);
+        }
+        
+        .feature-icon {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+        
+        .feature-title {
+            font-family: var(--font-display);
+            font-size: 1.125rem;
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+            color: var(--primary-blue-dark);
+        }
+        
+        .feature-description {
+            font-size: 0.9375rem;
+            color: var(--neutral-dark);
+        }
+        
+        .cta-section {
+            background: var(--primary-blue);
+            color: var(--white);
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+        
+        .cta-title {
+            font-family: var(--font-display);
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .cta-text {
+            font-size: 1.125rem;
+            margin-bottom: 2rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .btn-cta {
+            display: inline-block;
+            padding: 1rem 2.5rem;
+            background: var(--accent-cyan);
+            color: var(--white);
+            font-family: var(--font-body);
+            font-size: 1rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-cta:hover {
+            background: var(--white);
+            color: var(--primary-blue);
+            transform: translateY(-2px);
+        }
+        
+        @media (max-width: 768px) {
+            .service-layout {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .service-sidebar {
+                position: static;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="page-header">
+        <div class="container">
+            <div class="breadcrumb">
+                <a href="index.html">INICIO</a> / SERVICIOS
+            </div>
+            <h1 class="page-title">Soluciones Termomecánicas Especializadas</h1>
+            <p class="page-subtitle">
+                Servicios integrales de ingeniería para instalaciones de alta complejidad
+            </p>
+        </div>
+    </div>
+
+    <!-- SISTEMA DE AIRE ACONDICIONADO DE PRECISIÓN -->
+    <section class="service-section" id="precision-ac">
+        <div class="service-layout">
+            <div class="service-sidebar">
+                <div class="service-category">SISTEMAS CRÍTICOS</div>
+                <h2 class="service-name">Aire Acondicionado de Precisión</h2>
+                <p class="service-intro">
+                    Sistemas de climatización de alta precisión diseñados para entornos críticos 
+                    que demandan control estricto de temperatura, humedad y calidad de aire.
+                </p>
+                
+                <div class="spec-box">
+                    <div class="spec-title">ESPECIFICACIONES TÉCNICAS</div>
+                    <div class="spec-grid">
+                        <div class="spec-item">PRECISIÓN TEMP: ±0.5°C</div>
+                        <div class="spec-item">PRECISIÓN HR: ±2% RH</div>
+                        <div class="spec-item">REDUNDANCIA: N+1 / 2N</div>
+                        <div class="spec-item">FILTRACIÓN: HEPA H13/H14</div>
+                        <div class="spec-item">MONITOREO: 24/7 BMS</div>
+                        <div class="spec-item">UPTIME: >99.9%</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="service-content">
+                <h3>Aplicaciones Críticas</h3>
+                <p>
+                    Nuestros sistemas de aire acondicionado de precisión están específicamente 
+                    diseñados para entornos donde las condiciones ambientales son críticas para 
+                    la operación. Implementamos soluciones con control de temperatura y humedad 
+                    de alta precisión, filtración avanzada y sistemas redundantes que garantizan 
+                    operación continua.
+                </p>
+                
+                <h4>Sectores de Aplicación</h4>
+                <ul>
+                    <li><strong>Quirófanos y Salas de Cirugía:</strong> Control estricto de temperatura, 
+                        humedad y presión positiva con filtración HEPA para prevenir infecciones</li>
+                    <li><strong>Data Centers y Salas de Servidores:</strong> Enfriamiento de precisión 
+                        con redundancia N+1 o 2N para proteger equipamiento crítico</li>
+                    <li><strong>Salas Blancas (Cleanrooms):</strong> Sistemas ISO clase 5-8 para 
+                        industria farmacéutica, electrónica y biotecnología</li>
+                    <li><strong>Laboratorios de Investigación:</strong> Condiciones controladas para 
+                        ensayos sensibles y almacenamiento de muestras</li>
+                    <li><strong>Centrales Telefónicas y Telecom:</strong> Climatización continua para 
+                        equipos de comunicaciones</li>
+                    <li><strong>Bancos de Sangre y Hemoterapia:</strong> Control preciso para 
+                        preservación de productos biológicos</li>
+                </ul>
+                
+                <h3>Características del Sistema</h3>
+                
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">🎯</div>
+                        <div class="feature-title">Precisión de Control</div>
+                        <div class="feature-description">
+                            Controladores de alta precisión con sensores redundantes para mantener 
+                            condiciones exactas ±0.5°C temperatura y ±2% humedad relativa
+                        </div>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">🔄</div>
+                        <div class="feature-title">Sistemas Redundantes</div>
+                        <div class="feature-description">
+                            Configuraciones N+1 o 2N con failover automático, eliminando puntos 
+                            únicos de falla y asegurando operación continua
+                        </div>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">🛡️</div>
+                        <div class="feature-title">Filtración Avanzada</div>
+                        <div class="feature-description">
+                            Sistemas de filtración multicapa incluyendo HEPA H13/H14, carbón activado 
+                            y UV-C según requerimientos del ambiente
+                        </div>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">📊</div>
+                        <div class="feature-title">Monitoreo 24/7</div>
+                        <div class="feature-description">
+                            BMS integrado con alertas tempranas, históricos de datos y reportes 
+                            automáticos para gestión proactiva
+                        </div>
+                    </div>
+                </div>
+                
+                <h3>Proceso de Implementación</h3>
+                <ul>
+                    <li>Análisis de cargas térmicas y requerimientos específicos del espacio</li>
+                    <li>Diseño de ingeniería con cálculos CFD para distribución uniforme</li>
+                    <li>Selección de equipamiento con especificaciones técnicas detalladas</li>
+                    <li>Instalación con supervisión de obra permanente</li>
+                    <li>Comisionamiento y balanceo del sistema completo</li>
+                    <li>Validación de performance según protocolos IQ/OQ/PQ</li>
+                    <li>Capacitación del personal de operación y mantenimiento</li>
+                    <li>Documentación as-built completa y manuales técnicos</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- SISTEMAS VRV/VRF -->
+    <section class="service-section" id="vrv-systems">
+        <div class="service-layout">
+            <div class="service-sidebar">
+                <div class="service-category">CLIMATIZACIÓN EFICIENTE</div>
+                <h2 class="service-name">Sistemas VRV / VRF</h2>
+                <p class="service-intro">
+                    Soluciones de Volumen de Refrigerante Variable de última generación para 
+                    máxima eficiencia energética y confort personalizado por zona.
+                </p>
+                
+                <div class="spec-box">
+                    <div class="spec-title">PERFORMANCE</div>
+                    <div class="spec-grid">
+                        <div class="spec-item">EFICIENCIA: SEER >20</div>
+                        <div class="spec-item">ZONAS: Hasta 64 unidades</div>
+                        <div class="spec-item">LONGITUD: Hasta 165m</div>
+                        <div class="spec-item">DESNIVEL: Hasta 90m</div>
+                        <div class="spec-item">AHORRO: 30-50% vs tradicional</div>
+                        <div class="spec-item">CAPACIDAD: 8 HP - 72 HP</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="service-content">
+                <h3>Tecnología VRV de Vanguardia</h3>
+                <p>
+                    Los sistemas VRV (Variable Refrigerant Volume) o VRF (Variable Refrigerant Flow) 
+                    representan la evolución más avanzada en climatización, permitiendo conectar múltiples 
+                    unidades interiores a una o más unidades exteriores, con control individual de 
+                    temperatura en cada zona y una eficiencia energética superior a cualquier sistema 
+                    tradicional.
+                </p>
+                
+                <h4>Ventajas del Sistema VRV</h4>
+                <ul>
+                    <li><strong>Eficiencia Energética Excepcional:</strong> SEER superior a 20, reduciendo 
+                        consumos entre 30% y 50% comparado con sistemas convencionales</li>
+                    <li><strong>Control Individual por Zona:</strong> Cada ambiente con su propio control 
+                        de temperatura, mejorando confort y ahorro</li>
+                    <li><strong>Operación Simultánea Calor/Frío:</strong> Sistemas con recuperación de 
+                        calor que permiten climatizar y calefaccionar simultáneamente</li>
+                    <li><strong>Instalación Flexible:</strong> Tuberías de cobre de pequeño diámetro, 
+                        longitudes extendidas y diferencias de nivel significativas</li>
+                    <li><strong>Operación Silenciosa:</strong> Niveles de ruido mínimos tanto en unidades 
+                        interiores como exteriores</li>
+                    <li><strong>Mantenimiento Simplificado:</strong> Acceso a unidades facilitado, 
+                        diagnóstico remoto y menor frecuencia de intervenciones</li>
+                </ul>
+                
+                <h3>Configuraciones Disponibles</h3>
+                
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">❄️</div>
+                        <div class="feature-title">VRV Standard</div>
+                        <div class="feature-description">
+                            Solo enfriamiento, ideal para espacios comerciales y oficinas con 
+                            calefacción independiente
+                        </div>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">🔄</div>
+                        <div class="feature-title">VRV Heat Pump</div>
+                        <div class="feature-description">
+                            Bomba de calor reversible, calefacción y refrigeración con inversión 
+                            de ciclo, versátil para todo el año
+                        </div>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">♻️</div>
+                        <div class="feature-title">VRV Heat Recovery</div>
+                        <div class="feature-description">
+                            Recuperación de calor para operar simultáneamente en modo calor y frío, 
+                            máxima eficiencia
+                        </div>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">💧</div>
+                        <div class="feature-title">VRV Water Cooled</div>
+                        <div class="feature-description">
+                            Condensación por agua para instalaciones sin espacio para condensadoras 
+                            exteriores
+                        </div>
+                    </div>
+                </div>
+                
+                <h4>Aplicaciones Típicas</h4>
+                <ul>
+                    <li>Edificios corporativos clase A con múltiples pisos</li>
+                    <li>Hoteles y apart-hotels con control individual por habitación</li>
+                    <li>Centros comerciales y locales de retail</li>
+                    <li>Instituciones educativas - universidades y colegios</li>
+                    <li>Hospitales y clínicas (áreas no críticas)</li>
+                    <li>Residencias premium y countries de lujo</li>
+                    <li>Gimnasios y centros deportivos</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- BMS Y AUTOMATIZACIÓN -->
+    <section class="service-section" id="bms-automation">
+        <div class="service-layout">
+            <div class="service-sidebar">
+                <div class="service-category">AUTOMATIZACIÓN INTELIGENTE</div>
+                <h2 class="service-name">Building Management System</h2>
+                <p class="service-intro">
+                    Gestión centralizada e inteligente de todas las instalaciones termomecánicas, 
+                    eléctricas y de control del edificio.
+                </p>
+                
+                <div class="spec-box">
+                    <div class="spec-title">INTEGRACIÓN</div>
+                    <div class="spec-grid">
+                        <div class="spec-item">PROTOCOLOS: BACnet, Modbus, LON</div>
+                        <div class="spec-item">SISTEMAS: HVAC + Lighting + Security</div>
+                        <div class="spec-item">ANALYTICS: Real-time + ML</div>
+                        <div class="spec-item">ACCESO: Web + Mobile</div>
+                        <div class="spec-item">AHORRO: 20-40% energía</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="service-content">
+                <h3>Control y Gestión Centralizada</h3>
+                <p>
+                    Un Building Management System (BMS) o Building Automation System (BAS) integra 
+                    todos los sistemas del edificio en una plataforma única de control, monitoreo 
+                    y optimización. Permite gestión centralizada, reducción de costos operativos, 
+                    mantenimiento predictivo y mejora sustancial de la eficiencia energética.
+                </p>
+                
+                <h4>Funcionalidades Principales</h4>
+                <ul>
+                    <li><strong>Control HVAC Centralizado:</strong> Gestión de todos los sistemas de 
+                        climatización desde una interfaz única con programación horaria y por zonas</li>
+                    <li><strong>Monitoreo en Tiempo Real:</strong> Visualización instantánea de todos 
+                        los parámetros operativos con dashboards personalizables</li>
+                    <li><strong>Optimización Energética:</strong> Algoritmos de machine learning que 
+                        optimizan consumos basándose en patrones históricos y ocupación</li>
+                    <li><strong>Alertas y Alarmas:</strong> Notificaciones automáticas por email, SMS 
+                        o push ante eventos críticos o desviaciones</li>
+                    <li><strong>Mantenimiento Predictivo:</strong> Análisis de tendencias para anticipar 
+                        fallas antes de que ocurran</li>
+                    <li><strong>Reportes Automáticos:</strong> Generación de reportes de consumo, 
+                        performance y eficiencia programables</li>
+                    <li><strong>Integración con Terceros:</strong> Conexión con sistemas de seguridad, 
+                        control de accesos, iluminación y detección de incendios</li>
+                </ul>
+                
+                <h3>Arquitectura del Sistema</h3>
+                
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">🖥️</div>
+                        <div class="feature-title">Servidor Central</div>
+                        <div class="feature-description">
+                            Servidor con software BMS, base de datos histórica, motor de reglas 
+                            y interfaz web responsiva
+                        </div>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">📡</div>
+                        <div class="feature-title">Controladores DDC</div>
+                        <div class="feature-description">
+                            Controladores de campo Direct Digital Control en cada sistema con 
+                            procesamiento local
+                        </div>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">📊</div>
+                        <div class="feature-title">Sensórica IoT</div>
+                        <div class="feature-description">
+                            Sensores de temperatura, humedad, CO2, presión, flujo, potencia y 
+                            ocupación conectados
+                        </div>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">📱</div>
+                        <div class="feature-title">Interfaces Usuario</div>
+                        <div class="feature-description">
+                            Apps móviles, web dashboards y pantallas HMI para operadores y 
+                            facility managers
+                        </div>
+                    </div>
+                </div>
+                
+                <h4>ROI y Beneficios Medibles</h4>
+                <ul>
+                    <li>Reducción de 20-40% en consumo energético total del edificio</li>
+                    <li>Disminución de 15-25% en costos de mantenimiento</li>
+                    <li>Aumento de 10-20% en vida útil de equipamiento</li>
+                    <li>Mejora en confort térmico con menos quejas de usuarios</li>
+                    <li>Tiempo de respuesta ante fallas reducido en 60-80%</li>
+                    <li>Cumplimiento certificaciones LEED, BREEAM o EDGE</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA FINAL -->
+    <section class="cta-section">
+        <div class="container">
+            <h2 class="cta-title">¿Listo para optimizar tus instalaciones?</h2>
+            <p class="cta-text">
+                Nuestro equipo de ingenieros está preparado para diseñar la solución perfecta 
+                para tu proyecto. Solicita una consultoría técnica sin costo.
+            </p>
+            <a href="index.html#contacto" class="btn-cta">Solicitar Consultoría Técnica</a>
+        </div>
+    </section>
+</body>
+</html>
