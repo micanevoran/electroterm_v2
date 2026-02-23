@@ -1,662 +1,356 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ELECTROTERM | Ingeniería Termomecánica de Precisión</title>
-    <meta name="description" content="Más de 40 años diseñando sistemas críticos de climatización para hospitales, industrias y edificios corporativos. Instalaciones termomecánicas de alta complejidad.">
-    <meta name="author" content="Ana Micaela Nevoran">
-    <link rel="shortcut icon" href="img/favicon.svg">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/styles.css">
-
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ElectroTerm | Ingeniería en Climatización</title>
+  <meta name="description" content="Más de 40 años diseñando sistemas críticos de climatización para hospitales, industrias y edificios corporativos. Instalaciones termomecánicas de alta complejidad.">
+  <meta name="author" content="Ana Micaela Nevoran">
+  <link rel="shortcut icon" href="img/icons/favicon.svg">
+  <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
-    <!-- =====================================================
-         NAVIGATION
-    ===================================================== -->
-    <nav class="navbar" id="navbar">
-        <div class="nav-container">
-            <a href="#inicio" class="logo">
-                <div>
-                    <img src="img/logo_variable_acento.svg" alt="logo Electroterm">
-                </div>
-            </a>
-            
-            <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle menu">
-                <span class="hamburger"></span>
-            </button>
-            
-            <ul class="nav-menu" id="navMenu">
-                <li><a href="#nosotros" class="nav-link">Nosotros</a></li>
-                <li><a href="#servicios" class="nav-link">Servicios</a></li>
-                <li><a href="#proyectos" class="nav-link">Proyectos</a></li>
-                <li><a href="#contacto" class="nav-link">Contacto</a></li>
-            </ul>
-        </div>
-    </nav>
 
-    <!-- =====================================================
-         HERO SECTION
-    ===================================================== -->
-    <section class="hero" id="inicio">
-        <div class="hero-circles">
-            <div class="circle circle-1"></div>
-            <div class="circle circle-2"></div>
-            <div class="circle circle-3"></div>
+  <!-- ===== NAVBAR ===== -->
+  <header class="navbar" id="navbar">
+    <div class="navbar__inner">
+      <a href="index.html" class="navbar__logo">
+        <img src="img/logo_primary.svg" alt="ElectroTerm" />
+      </a>
+
+      <!-- Desktop nav -->
+      <nav class="navbar__nav" id="desktopNav">
+        <a href="nosotros.html" class="navbar__link">Nosotros</a>
+        <a href="#servicios" class="navbar__link">Servicios</a>
+        <a href="proyectos.html" class="navbar__link">Proyectos</a>
+        <a href="#contacto" class="navbar__link navbar__link--cta">Contacto</a>
+      </nav>
+
+      <!-- Hamburger button -->
+      <button class="navbar__hamburger" id="hamburgerBtn" aria-label="Abrir menú" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+
+    <!-- Mobile nav -->
+    <nav class="navbar__mobile" id="mobileNav" aria-hidden="true">
+      <a href="nosotros.html" class="navbar__mobile-link">Nosotros</a>
+      <a href="#servicios" class="navbar__mobile-link" id="mobileServiciosLink">Servicios</a>
+      <a href="proyectos.html" class="navbar__mobile-link">Proyectos</a>
+      <a href="#contacto" class="navbar__mobile-link" id="mobileContactoLink">Contacto</a>
+    </nav>
+  </header>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero" id="inicio">
+    <div class="hero__content">
+      <h1 class="hero__title">Ingeniería en<br /><span class="hero__title-accent">climatización</span></h1>
+      <p class="hero__desc">
+        Más de 40 años diseñando sistemas de climatización de alta
+        complejidad para hospitales, data centers, edificios e industrias.
+      </p>
+      <div class="hero__actions">
+        <a href="#obras" class="btn btn--secondary">VER MÁS</a>
+        <a href="#contacto" class="btn btn--primary">CONTACTO</a>
+      </div>
+    </div>
+    <div class="hero__image">
+      <img src="img/landing.webp" alt="instalación exterior conductos de aire acondicionado " class="hero__img" />
+    </div>
+  </section>
+
+  <!-- ===== OBRAS Y PROYECTOS ===== -->
+  <section class="obras" id="obras">
+    <div class="obras__inner">
+      <div class="obras__gallery" id="gallery">
+        <div class="obras__slider" id="obrasSlider">
+          <div class="obras__slide">
+            <img src="img/proyectos/usal_cba.webp" alt="Universidad del Salvador - Sede Córdoba" class="obras__img placeholder-img" />
+            <span class="obras__img-label label-sm">Universidad del salvador</span>
+          </div>
+        </div>
+        <div class="obras__slider-controls">
+          <button class="slider-btn" id="prevSlide" aria-label="Anterior">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="15 18 9 12 15 6"/></svg>
+          </button>
+          <button class="slider-btn" id="nextSlide" aria-label="Siguiente">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="9 18 15 12 9 6"/></svg>
+          </button>
+        </div>
+      </div>
+      <div class="obras__content" id="obras__content">
+        <h2 class="obras__title">Obras y<br />proyectos</h2>
+        <p class="obras__desc">
+          Más de 40 años diseñando sistemas de climatización de alta complejidad
+          para hospitales, data centers, edificios e industrias.
+        </p>
+        <a href="proyectos.html" class="btn btn--dark">NUESTRAS OBRAS</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== STATS ===== -->
+  <section class="stats">
+    <div class="stats__inner">
+      <div class="stats__item">
+        <span class="stats__number">+40</span>
+        <span class="stats__label label-sm">AÑOS</span>
+        <span class="stats__desc">De trayectoria<br />ininterrumpida</span>
+      </div>
+      <div class="stats__item">
+        <span class="stats__number">+70</span>
+        <span class="stats__label label-sm">PROYECTOS</span>
+        <span class="stats__desc">Ejecutados con éxito</span>
+      </div>
+      <div class="stats__item">
+        <span class="stats__number">+12</span>
+        <span class="stats__label label-sm">MILLONES</span>
+        <span class="stats__desc">De BTUs instalados</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SERVICIOS ===== -->
+  <section class="servicios" id="servicios">
+    <div class="servicios__inner">
+      <h2 class="servicios__title">Nuestros servicios</h2>
+
+      <div class="servicios__accordion">
+
+        <div class="accordion__item">
+          <button class="accordion__trigger" aria-expanded="false">
+            <span>Ingeniería</span>
+            <svg class="accordion__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="accordion__body">
+            <ul>
+              <li>Lorem Ipsum...</li>
+              <li>Lorem Ipsum...</li>
+              <li>Lorem Ipsum...</li>
+              <li>Lorem Ipsum...</li>
+              <li>Lorem Ipsum...</li>
+              <li>Lorem Ipsum...</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="accordion__item">
+          <button class="accordion__trigger" aria-expanded="false">
+            <span>Instalación y Puesta en Marcha</span>
+            <svg class="accordion__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="accordion__body">
+            <ul>
+              <li>Lorem Ipsum...</li>
+              <li>Lorem Ipsum...</li>
+              <li>Lorem Ipsum...</li>
+              <li>Lorem Ipsum...</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="accordion__item">
+          <button class="accordion__trigger" aria-expanded="false">
+            <span>Mantenimiento</span>
+            <svg class="accordion__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="accordion__body">
+            <ul>
+              <li>Lorem Ipsum...</li>
+              <li>Lorem Ipsum...</li>
+              <li>Lorem Ipsum...</li>
+              <li>Lorem Ipsum...</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="accordion__item">
+          <button class="accordion__trigger" aria-expanded="false">
+            <span>Distribución</span>
+            <svg class="accordion__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="accordion__body">
+            <ul>
+              <li>Lorem Ipsum...</li>
+              <li>Lorem Ipsum...</li>
+  
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CLIENTES ===== -->
+  <section class="clientes">
+    <div class="clientes__inner">
+      <p class="clientes__tagline">Clientes que confían en nosotros</p>
+      
+      <!-- Carousel Container -->
+      <div class="clientes__carousel">
+        
+        <!-- Arrow Left -->
+        <button class="clientes__arrow clientes__arrow--left" id="clientesPrev" aria-label="Anterior">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="15 18 9 12 15 6"/>
+          </svg>
+        </button>
+        
+        <!-- Track - los slides se generan dinámicamente por JS -->
+        <div class="clientes__track-wrapper">
+          <div class="clientes__track" id="clientesTrack">
+            <!-- Los logos originales - JS los organizará en slides -->
+            <img src="img/clientes/acerbrag.png" alt="Acerbrag" class="clientes__logo" data-client />
+            <img src="img/clientes/aeropuertos_argentina.png" alt="Aeropuertos Argentina" class="clientes__logo" data-client />
+            <img src="img/clientes/andreani.png" alt="Andreani" class="clientes__logo" data-client />
+            <img src="img/clientes/armada.png" alt="Armada Argentina" class="clientes__logo" data-client />
+            <img src="img/clientes/aysa.png" alt="AYSA" class="clientes__logo" data-client />
+            <img src="img/clientes/burgerking.png" alt="BuergerKing" class="clientes__logo" data-client />
+            <img src="img/clientes/casm.png" alt="Colegio de Abogados de San Martín" class="clientes__logo" data-client />
+            <img src="img/clientes/cencosud.png" alt="Cencosud" class="clientes__logo" data-client />
+            <img src="img/clientes/colegio_escribanos.png" alt="Colegio de Escribanos de Buenos Aires" class="clientes__logo" data-client />
+            <img src="img/clientes/consejo_magistratura.png" alt="Consejo de la Magistratura" class="clientes__logo" data-client />
+            <img src="img/clientes/dock_sud.png" alt="Central Dock Sud" class="clientes__logo" data-client />
+            <img src="img/clientes/glaxo.png" alt="Laboratorios Glaxo" class="clientes__logo" data-client />
+            <img src="img/clientes/iosfa.png" alt="IOSFA" class="clientes__logo" data-client />
+            <img src="img/clientes/johnson_matthey.png" alt="johnson_matthey" class="clientes__logo" data-client />
+            <img src="img/clientes/macro.png" alt="Banco Macro" class="clientes__logo" data-client />
+            <img src="img/clientes/maria_felix.png" alt="Restaurant María Felix" class="clientes__logo" data-client />
+            <img src="img/clientes/naturgy.png" alt="Naturgy" class="clientes__logo" data-client />
+            <img src="img/clientes/oracle.png" alt="Oracle" class="clientes__logo" data-client />
+            <img src="img/clientes/ort.png" alt="Escuela ORT" class="clientes__logo" data-client />
+            <img src="img/clientes/poder_judicial_nacion.png" alt="Poder Judicial de la Nación" class="clientes__logo" data-client />
+            <img src="img/clientes/pol_ka.png" alt="Pol-Ka Producciones" class="clientes__logo" data-client />
+            <img src="img/clientes/puma_energy.png" alt="PUMA Energy" class="clientes__logo" data-client />
+            <img src="img/clientes/sap.png" alt="SAP" class="clientes__logo" data-client />
+            <img src="img/clientes/storey.png" alt="Storey" class="clientes__logo" data-client />
+            <img src="img/clientes/subte.png" alt="Subte Buenos Aires" class="clientes__logo" data-client />
+            <img src="img/clientes/teatro_ribera.png" alt="Teatro de la Ribera" class="clientes__logo" data-client />
+            <img src="img/clientes/telefonica.png" alt="Telefónica" class="clientes__logo" data-client />
+            <img src="img/clientes/volkswagen.png" alt="Volkswagen" class="clientes__logo" data-client />
+            <img src="img/clientes/xerox.png" alt="Xerox" class="clientes__logo" data-client />
+            <img src="img/clientes/ypf.png" alt="YPF" class="clientes__logo" data-client />
+          </div>
         </div>
         
-        <div class="hero-content">
-            <div class="label-large hero-label">INSTALACIONES TERMOMECÁNICAS</div>
-            <h1 class="display-large hero-title">Ingeniería en Climatización</h1>
-            <p class="body-large hero-subtitle">
-                Más de 40 años diseñando sistemas críticos de climatización para hospitales, 
-                industrias y edificios corporativos de alta complejidad.
-            </p>
-            <div class="label-small hero-tech-label">
-                EXPERIENCIA • CALIDAD • COMPROMISO
-            </div>
-            <div class="hero-cta">
-                <a href="#contacto" class="btn btn-primary">Consultoría Técnica</a>
-                <a href="#proyectos" class="btn btn-ghost">Ver Proyectos</a>
-            </div>
-        </div>
-    </section>
+        <!-- Arrow Right -->
+        <button class="clientes__arrow clientes__arrow--right" id="clientesNext" aria-label="Siguiente">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="9 18 15 12 9 6"/>
+          </svg>
+        </button>
+        
+      </div>
+      
+    </div>
+  </section>
 
-    <!-- =====================================================
-         EXPERTISE SECTION
-    ===================================================== -->
-    <section class="expertise" id="nosotros">
-        <div class="container">
-            <h2 class="display-medium section-title">Cuatro Décadas de Precisión Térmica</h2>
-            
-            <div class="expertise-grid">
-                <div class="expertise-card">
-                    <div class="label-large expertise-label">EXPERIENCIA</div>
-                    <div class="expertise-number">40+</div>
-                    <p class="body-regular expertise-description">
-                        Años de trayectoria en instalaciones termomecánicas de alta complejidad. Equipo técnico especializado en proyectos críticos para sectores exigentes.
-                    </p>
-                </div>
-                
-                <div class="expertise-card">
-                    <div class="label-large expertise-label">PROYECTOS CRÍTICOS</div>
-                    <div class="expertise-number">70+</div>
-                    <p class="body-regular expertise-description">
-                        Instalaciones ejecutadas en hospitales, centros de datos, industria farmacéutica y edificios corporativos con estándares de calidad internacionales.
-                    </p>
-                </div>
-                
-                <div class="expertise-card">
-                    <div class="label-large expertise-label">CAPACIDAD INSTALADA</div>
-                    <div class="expertise-number">12,5</div>
-                    <p class="body-regular expertise-description">
-                       Millones de BTUs instalados en proyectos de alta complejidad. Más de 1,000 TR de capacidad frigorífica garantizando confort
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
+  <!-- ===== CONTACTO ===== -->
+  <section class="contacto" id="contacto">
+    <div class="contacto__inner">
+      <h2 class="contacto__title">Hablemos de tu proyecto</h2>
 
-    <!-- =====================================================
-         SERVICES SECTION
-    ===================================================== -->
-    <section class="services" id="servicios">
-        <div class="container">
-            <h2 class="display-medium section-title">Soluciones Integrales de Climatización</h2>
-            
-            <div class="service-tabs">
-                <button class="service-tab active" data-tab="criticos">Sistemas Críticos</button>
-                <button class="service-tab" data-tab="climatizacion">Climatización</button>
-                <button class="service-tab" data-tab="industrial">Industrial</button>
-                <button class="service-tab" data-tab="automatizacion">Automatización</button>
-            </div>
-            
-            <!-- Sistemas Críticos -->
-            <div class="service-content active" id="criticos">
-                <div class="service-grid">
-                    <div class="service-card">
-                        <div class="service-card-content">
-                            <h3 class="heading-2 service-title">Aire Acondicionado de Precisión</h3>
-                            <p class="body-regular service-description">
-                                Climatización de alta precisión para entornos críticos que requieren control estricto de temperatura, humedad y calidad de aire.
-                            </p>
-                            <div class="service-specs">
-                                <div class="label-small service-specs-title">ESPECIFICACIONES</div>
-                                <div class="technical-data service-specs-list">
-                                    TEMP: ±0.5°C<br>
-                                    HUMIDITY: ±2% RH<br>
-                                    REDUNDANCIA: N+1<br>
-                                    FILTRACIÓN: HEPA H13/H14
-                                </div>
-                            </div>
-                            <p class="body-small">
-                                <strong>Aplicaciones:</strong> Quirófanos, Salas blancas, Data centers, 
-                                Laboratorios, Industria farmacéutica, Centrales telefónicas
-                            </p>
-                        </div>
-                    </div>
-                    
-                    <div class="service-card">
-                        <div class="service-card-content">
-                            <h3 class="heading-2 service-title">Sistemas Redundantes</h3>
-                            <p class="body-regular service-description">
-                                Diseño e implementación de sistemas con redundancia N+1 o 2N para 
-                                garantizar operación continua sin interrupciones.
-                            </p>
-                            <div class="service-specs">
-                                <div class="label-small service-specs-title">CONFIGURACIONES</div>
-                                <div class="technical-data service-specs-list">
-                                    MODO: N+1, N+2, 2N<br>
-                                    UPTIME: 99.99%<br>
-                                    FAILOVER: Automático<br>
-                                    MONITOREO: 24/7
-                                </div>
-                            </div>
-                            <p class="body-small">
-                                <strong>Sectores:</strong> Salud crítica, Procesamiento de datos, 
-                                Industria continua, Telecomunicaciones
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Climatización -->
-            <div class="service-content" id="climatizacion">
-                <div class="service-grid">
-                    <div class="service-card">
-                        <div class="service-card-content">
-                            <h3 class="heading-2 service-title">Sistemas VRV/VRF</h3>
-                            <p class="body-regular service-description">
-                                Volumen de Refrigerante Variable para máxima eficiencia energética 
-                                y control individual por zona.
-                            </p>
-                            <div class="service-specs">
-                                <div class="label-small service-specs-title">CARACTERÍSTICAS</div>
-                                <div class="technical-data service-specs-list">
-                                    EFICIENCIA: SEER >20<br>
-                                    ZONAS: Hasta 64 unidades<br>
-                                    CONTROL: Individual<br>
-                                    AHORRO: 30-50% vs tradicional
-                                </div>
-                            </div>
-                            <p class="body-small">
-                                <strong>Ideal para:</strong> Edificios corporativos, Hoteles, 
-                                Centros comerciales, Residencias premium
-                            </p>
-                        </div>
-                    </div>
-                    
-                    <div class="service-card">
-                        <div class="service-card-content">
-                            <h3 class="heading-2 service-title">Sistemas VAV</h3>
-                            <p class="body-regular service-description">
-                                Volumen de Aire Variable con control preciso del flujo para 
-                                optimización energética y confort adaptativo.
-                            </p>
-                            <div class="service-specs">
-                                <div class="label-small service-specs-title">PERFORMANCE</div>
-                                <div class="technical-data service-specs-list">
-                                    CONTROL: Caudal variable<br>
-                                    AHORRO: 20-40% energía<br>
-                                    ZONAS: Multizona<br>
-                                    INTEGRACIÓN: BMS/BAS
-                                </div>
-                            </div>
-                            <p class="body-small">
-                                <strong>Aplicaciones:</strong> Oficinas clase A, Universidades, 
-                                Hospitales, Espacios multiuso
-                            </p>
-                        </div>
-                    </div>
-                    
-                    <div class="service-card">
-                        <div class="service-card-content">
-                            <h3 class="heading-2 service-title">Agua Fría - Chillers</h3>
-                            <p class="body-regular service-description">
-                                Sistemas centralizados de agua fría con enfriadoras de alto 
-                                rendimiento para grandes instalaciones.
-                            </p>
-                            <div class="service-specs">
-                                <div class="label-small service-specs-title">SISTEMAS</div>
-                                <div class="technical-data service-specs-list">
-                                    TIPO: Aire/Agua condensado<br>
-                                    CAPACIDAD: 50-2000 TR<br>
-                                    EFICIENCIA: >6.0 kW/TR<br>
-                                    REFRIGERANTE: R-134a, R-410A
-                                </div>
-                            </div>
-                            <p class="body-small">
-                                <strong>Proyectos:</strong> Hospitales, Shopping centers, 
-                                Industrias, Campus universitarios
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Industrial -->
-            <div class="service-content" id="industrial">
-                <div class="service-grid">
-                    <div class="service-card">
-                        <div class="service-card-content">
-                            <h3 class="heading-2 service-title">Ventilación Industrial</h3>
-                            <p class="body-regular service-description">
-                                Sistemas de ventilación mecánica para extracción de contaminantes, 
-                                control de temperatura y renovación de aire.
-                            </p>
-                            <div class="service-specs">
-                                <div class="label-small service-specs-title">CAPACIDADES</div>
-                                <div class="technical-data service-specs-list">
-                                    CAUDAL: Hasta 100,000 m³/h<br>
-                                    FILTRACIÓN: G4 a HEPA<br>
-                                    EXTRACCIÓN: Gases/vapores<br>
-                                    MONITOREO: Tiempo real
-                                </div>
-                            </div>
-                            <p class="body-small">
-                                <strong>Sectores:</strong> Manufactura, Química, Alimentaria, 
-                                Automotriz, Metalúrgica
-                            </p>
-                        </div>
-                    </div>
-                    
-                    <div class="service-card">
-                        <div class="service-card-content">
-                            <h3 class="heading-2 service-title">Torres de Enfriamiento</h3>
-                            <p class="body-regular service-description">
-                                Diseño e instalación de torres de enfriamiento para disipación 
-                                de calor en procesos industriales.
-                            </p>
-                            <div class="service-specs">
-                                <div class="label-small service-specs-title">TIPOS</div>
-                                <div class="technical-data service-specs-list">
-                                    FLUJO: Contraflujo/Flujo cruzado<br>
-                                    CAPACIDAD: Variable<br>
-                                    MATERIAL: FRP, Acero galv.<br>
-                                    CONTROL: VFD integrado
-                                </div>
-                            </div>
-                            <p class="body-small">
-                                <strong>Uso:</strong> Procesos industriales, HVAC centralizado, 
-                                Plantas de producción
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Automatización -->
-            <div class="service-content" id="automatizacion">
-                <div class="service-grid">
-                    <div class="service-card">
-                        <div class="service-card-content">
-                            <h3 class="heading-2 service-title">Building Management System</h3>
-                            <p class="body-regular service-description">
-                                Sistemas de gestión centralizada BMS/BAS para control y monitoreo 
-                                integral de todas las instalaciones.
-                            </p>
-                            <div class="service-specs">
-                                <div class="label-small service-specs-title">FUNCIONALIDADES</div>
-                                <div class="technical-data service-specs-list">
-                                    PROTOCOLO: BACnet, Modbus, LON<br>
-                                    INTEGRACIÓN: HVAC + Lighting + Security<br>
-                                    ANÁLISIS: Consumos en tiempo real<br>
-                                    ACCESO: Web/Mobile dashboard
-                                </div>
-                            </div>
-                            <p class="body-small">
-                                <strong>Beneficios:</strong> Reducción 20-30% consumo energético, 
-                                Mantenimiento predictivo, Optimización automática
-                            </p>
-                        </div>
-                    </div>
-                    
-                    <div class="service-card">
-                        <div class="service-card-content">
-                            <h3 class="heading-2 service-title">Control y Monitoreo IoT</h3>
-                            <p class="body-regular service-description">
-                                Sensórica avanzada y control IoT para gestión inteligente de 
-                                instalaciones termomecánicas.
-                            </p>
-                            <div class="service-specs">
-                                <div class="label-small service-specs-title">TECNOLOGÍA</div>
-                                <div class="technical-data service-specs-list">
-                                    SENSORES: T°, HR, CO2, Presión<br>
-                                    COMUNICACIÓN: WiFi, LoRa, Ethernet<br>
-                                    ALERTAS: Email, SMS, Push<br>
-                                    ANALYTICS: Machine Learning
-                                </div>
-                            </div>
-                            <p class="body-small">
-                                <strong>Aplicaciones:</strong> Monitoreo remoto 24/7, Detección 
-                                anticipada de fallas, Optimización energética
-                            </p>
-                        </div>
-                    </div>
-                    
-                    <div class="service-card">
-                        <div class="service-card-content">
-                            <h3 class="heading-2 service-title">Tableros de Comando</h3>
-                            <p class="body-regular service-description">
-                                Diseño y fabricación de tableros eléctricos y de control para 
-                                sistemas termomecánicos.
-                            </p>
-                            <div class="service-specs">
-                                <div class="label-small service-specs-title">COMPONENTES</div>
-                                <div class="technical-data service-specs-list">
-                                    PLC: Siemens, Allen Bradley<br>
-                                    HMI: Touch panel integrado<br>
-                                    PROTECCIÓN: IP54/IP65<br>
-                                    CERTIFICACIÓN: IEC 61439
-                                </div>
-                            </div>
-                            <p class="body-small">
-                                <strong>Características:</strong> Diseño custom, Documentación completa, 
-                                Garantía extendida, Soporte técnico
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+      <div class="contacto__grid">
+        <!-- Info -->
+        <div class="contacto__info">
+          <p class="label-sm">Información de Contacto</p>
 
-    <!-- =====================================================
-         PROJECTS SECTION
-    ===================================================== -->
-    <section class="projects" id="proyectos">
-        <div class="container">
-            <h2 class="display-medium section-title">Proyectos de Alta Complejidad</h2>
-            
-            <div class="project-filters">
-                <button class="filter-btn active" data-filter="all">Todos</button>
-                <button class="filter-btn" data-filter="salud">Salud</button>
-                <button class="filter-btn" data-filter="educacion">Educación</button>
-                <button class="filter-btn" data-filter="corporativo">Corporativo</button>
-                <button class="filter-btn" data-filter="industrial">Industrial</button>
+          <div class="contacto__info-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
+            <div>
+              <strong>OFICINAS</strong>
+              <p>Av. Crámer 4250<br />Saavedra, CABA<br />Argentina</p>
             </div>
-            
-            <div class="projects-grid">
-                <div class="project-card" data-category="salud">
-                    <div class="project-image"><img src="img/proyectos/hospital_materno_teresa.png" alt=""></div>
-                    <div class="project-content">
-                        <div class="label-small project-label">SALUD • 2010</div>
-                        <h3 class="heading-2 project-title">Hospital Materno Infantil Teresa Luisa Germani</h3>
-                        <p class="body-regular project-description">
-                            Máquinas enfriadoras de líquidos - Unidades Farmacológicas sector quirófanos de 5 y 12 TR
-                        </p>
-                        <div class="technical-data project-data">
-                            2,400 m² | 10 MESES 
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="project-card" data-category="educacion">
-                    <div class="project-image"><img src="img/proyectos/usal_cba.png" alt=""></div>
-                    <div class="project-content">
-                        <div class="label-small project-label">EDUCACIÓN • 2012</div>
-                        <h3 class="heading-2 project-title">Universidad del Salvador</h3>
-                        <p class="body-regular project-description">
-                            Refrigeración 600 TR - Sistema VRV Heat Recovery - Unidades de tratamiento de aire farmacológicas y control de bioterio
-                        </p>
-                        <div class="technical-data project-data">
-                            12,000 m² | 12 MESES
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="project-card" data-category="corporativo">
-                    <div class="project-image"><img src="img/proyectos/dock_del_plata.png" alt=""></div>
-                    <div class="project-content">
-                        <div class="label-small project-label">CORPORATIVO • 2015</div>
-                        <h3 class="heading-2 project-title">Dock del Plata - Oficinas Volkskwagen</h3>
-                        <p class="body-regular project-description">
-                            Refrigeración 110 TR para 25,000 m² de espacios de oficina
-                        </p>
-                        <div class="technical-data project-data">
-                            25,000 m² | 4 MESES 
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="project-card" data-category="salud">
-                    <div class="project-image"><img src="img/proyectos/farmacia_iosfa.png" alt=""></div>
-                    <div class="project-content">
-                        <div class="label-small project-label">SALUD • 2017</div>
-                        <h3 class="heading-2 project-title">Farmacia IOSFA Pedro Mallo</h3>
-                        <p class="body-regular project-description">
-                            Sistema de refrigeración de 20 TR diseñado para garantizar condiciones óptimas de almacenamiento farmacéutico según normativas sanitarias. 
-                        </p>
-                        <div class="technical-data project-data">
-                            3,500 m² | 10 MESES 
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="project-card" data-category="industrial">
-                    <div class="project-image"><img src="img/proyectos/central_docksud.png" alt=""></div>
-                    <div class="project-content">
-                        <div class="label-small project-label">INDUSTRIAL • 2020</div>
-                        <h3 class="heading-2 project-title">Central Térmica Dock Sud</h3>
-                        <p class="body-regular project-description">
-                            Sistema VRV Heat Pump de 40 TR con tecnología inverter para climatización de áreas operativas y de control. Solución dual frío/calor diseñada para entorno industrial de alta exigencia con operación continua.
-                        </p>
-                        <div class="technical-data project-data">
-                            1,800 m² | 14 MESES
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="project-card" data-category="corporativo">
-                    <div class="project-image"><img src="img/proyectos/aysa_palacio.png" alt=""></div>
-                    <div class="project-content">
-                        <div class="label-small project-label">CORPORATIVO • 2023</div>
-                        <h3 class="heading-2 project-title">AYSA - Centro de Cómputos</h3>
-                        <p class="body-regular project-description">
-                            Sistema de refrigeración de precisión de 60 TR diseñado específicamente para centro de cómputos crítico. Control estricto de temperatura 24/7 con redundancia N+1 garantizando protección de infraestructura IT.
-                        </p>
-                        <div class="technical-data project-data">
-                            800 m² | 8 MESES
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+          </div>
 
-    <!-- =====================================================
-         CAPABILITIES SECTION
-    ===================================================== -->
-    <section class="capabilities">
-        <div class="container">
-            <h2 class="display-medium section-title">Capacidad de Proyecto y Ejecución</h2>
-            
-            <div class="capabilities-grid">
-                <div class="capability-item">
-                    <div class="capability-icon">CAD</div>
-                    <div class="label-small capability-label">DISEÑO 3D</div>
-                </div>
-                <div class="capability-item">
-                    <div class="capability-icon">BIM</div>
-                    <div class="label-small capability-label">MODELADO MEP</div>
-                </div>
-                <div class="capability-item">
-                    <div class="capability-icon">CFD</div>
-                    <div class="label-small capability-label">SIMULACIÓN</div>
-                </div>
-                <div class="capability-item">
-                    <div class="capability-icon">IoT</div>
-                    <div class="label-small capability-label">AUTOMATIZACIÓN</div>
-                </div>
-                <div class="capability-item">
-                    <div class="capability-icon">PM</div>
-                    <div class="label-small capability-label">GESTIÓN</div>
-                </div>
-                <div class="capability-item">
-                    <div class="capability-icon">QA</div>
-                    <div class="label-small capability-label">CALIDAD</div>
-                </div>
+          <div class="contacto__info-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8 19.79 19.79 0 01.21 2.21 2 2 0 012.18 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.91 7.09a16 16 0 006 6l.56-.56a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14.92z"/></svg>
+            <div>
+              <strong>TELÉFONOS</strong>
+              <p>Tel: (011) 4701-6154<br />Cel: +54 11 4444-4808</p>
             </div>
-            
-            <div class="capabilities-list">
-                <h3>Servicios Integrados de Ingeniería</h3>
-                <ul>
-                    <li>Ingeniería termomecánica y cálculos</li>
-                    <li>Modelado BIM (Building Information Modeling)</li>
-                    <li>Simulación CFD y análisis térmico</li>
-                    <li>Diseño de instalaciones eléctricas asociadas</li>
-                    <li>Project management y planificación</li>
-                    <li>Puesta en marcha y comisionamiento</li>
-                    <li>Capacitación de personal operativo</li>
-                    <li>Mantenimiento preventivo y correctivo</li>
-                    <li>Auditorías energéticas y optimización</li>
-                    <li>Documentación as-built completa</li>
-                </ul>
-            </div>
-        </div>
-    </section>
+          </div>
 
-    <!-- =====================================================
-         CONTACT SECTION
-    ===================================================== -->
-    <section class="contact" id="contacto">
-        <div class="container">
-            <h2 class="display-medium section-title">Hablemos de Tu Proyecto</h2>
-            
-            <div class="contact-grid">
-                <div class="contact-info">
-                    <h3>Información de Contacto</h3>
-                    
-                    <div class="contact-item">
-                        <div class="contact-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 0c-4.198 0-8 3.403-8 7.602 0 4.198 3.469 9.21 8 16.398 4.531-7.188 8-12.2 8-16.398 0-4.199-3.801-7.602-8-7.602zm0 11c-1.657 0-3-1.343-3-3s1.343-3 3-3 3 1.343 3 3-1.343 3-3 3z"/></svg></div>
-                        <div class="contact-details">
-                            <h4>Oficinas</h4>
-                            <p>Av. Crámer 4250<br>Saavedra, CABA<br>Argentina</p>
-                        </div>
-                    </div>
-                    
-                    <div class="contact-item">
-                        <div class="contact-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 22.621l-3.521-6.795c-.008.004-1.974.97-2.064 1.011-2.24 1.086-6.799-7.82-4.609-8.994l2.083-1.026-3.493-6.817-2.106 1.039c-7.202 3.755 4.233 25.982 11.6 22.615.121-.055 2.102-1.029 2.11-1.033z"/></svg></div>
-                        <div class="contact-details">
-                            <h4>Teléfonos</h4>
-                            <p>Tel: (011) 4701-6154<br>Cel: +54 11 4444-4808</p>
-                        </div>
-                    </div>
-                    
-                    <div class="contact-item">
-                        <div class="contact-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 .02c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm6.99 6.98l-6.99 5.666-6.991-5.666h13.981zm.01 10h-14v-8.505l7 5.673 7-5.672v8.504z"/></svg></div>
-                        <div class="contact-details">
-                            <h4>Email</h4>
-                            <p>electroterm@electroterm.com.ar</p>
-                        </div>
-                    </div>
-                    
-                </div>
-                
-                <div class="contact-form">
-                    <form id="contactForm">
-                        <div class="form-group">
-                            <label class="form-label" for="name">Nombre Completo</label>
-                            <input type="text" id="name" class="form-input" placeholder="Juan Pérez" required>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label class="form-label" for="email">Email</label>
-                            <input type="email" id="email" class="form-input" placeholder="juan@empresa.com" required>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label class="form-label" for="phone">Teléfono</label>
-                            <input type="tel" id="phone" class="form-input" placeholder="+54 11 1234-5678">
-                        </div>
-                        
-                        <div class="form-group">
-                            <label class="form-label" for="projectType">Tipo de Proyecto</label>
-                            <select id="projectType" class="form-select" required>
-                                <option value="">Seleccionar...</option>
-                                <option value="critico">Sistema Crítico (Hospital, Data Center)</option>
-                                <option value="corporativo">Corporativo / Oficinas</option>
-                                <option value="industrial">Industrial / Manufactura</option>
-                                <option value="residencial">Residencial Premium</option>
-                                <option value="educacion">Educación / Universidad</option>
-                                <option value="mantenimiento">Mantenimiento / Service</option>
-                                <option value="consultoria">Consultoría Técnica</option>
-                            </select>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label class="form-label" for="message">Mensaje</label>
-                            <textarea id="message" class="form-textarea" placeholder="Deje aquí su consulta..." required></textarea>
-                        </div>
-                        
-                        <button type="submit" class="btn btn-primary btn-full">
-                            Enviar Consulta
-                        </button>
-                    </form>
-                </div>
+          <div class="contacto__info-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            <div>
+              <strong>EMAIL</strong>
+              <p>electroterm@electroterm.com.ar</p>
             </div>
+          </div>
         </div>
-    </section>
 
-    <!-- =====================================================
-         FOOTER
-    ===================================================== -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-brand">
-                    <h3>ELECTROTERM</h3>
-                    <p>
-                        40+ años de experiencia en instalaciones de climatización de alta complejidad. 
-                        Soluciones de ingeniería para sistemas críticos.
-                    </p>
-                </div>
-                
-                <div class="footer-column">
-                    <h4>Servicios</h4>
-                    <ul class="footer-links">
-                        <li><a href="#servicios">Sistemas Críticos</a></li>
-                        <li><a href="#servicios">VAV / VRV</a></li>
-                        <li><a href="#servicios">Calefacción</a></li>
-                        <li><a href="#servicios">Automatización</a></li>
-                        <li><a href="#servicios">Mantenimiento</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-column">
-                    <h4>Sectores</h4>
-                    <ul class="footer-links">
-                        <li><a href="#proyectos">Salud</a></li>
-                        <li><a href="#proyectos">Industria</a></li>
-                        <li><a href="#proyectos">Educación</a></li>
-                        <li><a href="#proyectos">Gobierno</a></li>
-                        <li><a href="#proyectos">Corporativo</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-column">
-                    <h4>Contacto</h4>
-                    <ul class="footer-links">
-                        <li>Av. Crámer 4250</li>
-                        <li>Saavedra, CABA</li>
-                        <li>(011) 4701-6154</li>
-                        <li>electroterm@electroterm.com.ar</li>
-                    </ul>
-                </div>
+        <!-- Form -->
+        <div class="contacto__form-wrap">
+          <form class="contacto__form" id="contactForm">
+            <div class="form-row">
+              <input type="text" name="nombre" placeholder="Nombre" class="form-input" required />
+              <input type="email" name="email" placeholder="Email" class="form-input" required />
             </div>
-            
-            <div class="footer-bottom">
-                <p class="technical-data footer-copyright">
-                    © 2026 ELECTROTERM | INGENIERÍA DE CLIMATIZACIÓN
-                </p>
-            </div>
+            <input type="tel" name="telefono" placeholder="Teléfono" class="form-input" />
+            <select name="proyecto" class="form-input form-select" required>
+              <option value="" disabled selected>Seleccionar...</option>
+              <option>Sistema Crítico (Hospital, Data Center)</option>
+              <option>Corporativo / Oficinas</option>
+              <option>Industrial / Manufactura</option>
+              <option>Residencial Premium</option>
+              <option>Educación / Universidad</option>
+              <option>Mantenimiento / Service</option>
+              <option>Consultoría Técnica</option>
+            </select>
+            <textarea name="mensaje" placeholder="Dejá tu mensaje aquí..." class="form-input form-textarea" rows="4"></textarea>
+            <button type="submit" class="btn btn--accent btn--full">Enviar Consulta</button>
+          </form>
         </div>
-    </footer>
+      </div>
+    </div>
+  </section>
 
-    <!-- JavaScript -->
-    <script src="scripts.js"></script>
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <div class="footer__brand">
+        <a href="index.html" class="footer__logo">
+          <img src="img/logo_accent_cyan.svg" alt="ElectroTerm" />
+        </a>
+        <p>Más de 40 años diseñando sistemas de climatización de alta complejidad para hospitales, data centers, edificios e industrias.</p>
+      </div>
+
+      <div class="footer__col">
+        <h4 class="label-sm">SERVICIOS</h4>
+        <a href="#servicios">Ingeniería</a>
+        <a href="#servicios">Instalación y Puesta en Marcha</a>
+        <a href="#servicios">Mantenimiento</a>
+        <a href="#servicios">Distribución</a>
+      </div>
+
+      <div class="footer__col">
+        <h4 class="label-sm">SECTORES</h4>
+        <a href="proyectos.html">Salud</a>
+        <a href="proyectos.html">Industria</a>
+        <a href="proyectos.html">Educación</a>
+        <a href="proyectos.html">Gobierno</a>
+        <a href="proyectos.html">Corporativo</a>
+      </div>
+
+      <div class="footer__col">
+        <h4 class="label-sm">CONTACTO</h4>
+        <span>Av. Crámer 4250</span>
+        <span>Saavedra, CABA</span>
+        <span>(011) 4701-6154</span>
+        <span>electroterm@electroterm.com.ar</span>
+      </div>
+    </div>
+
+    <div class="footer__bottom">
+      <span class="label-sm">2026 | ELECTROTERM®</span>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
 </body>
 </html>
