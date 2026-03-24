@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre Nosotros | ELECTROTERM</title>
+    <meta name="description" content="Más de 40 años de trayectoria desarrollando soluciones de climatización para proyectos residenciales, comerciales e industriales.">
+    <link rel="shortcut icon" href="img/icons/favicon.svg">
+    <link rel="stylesheet" href="css/nosotros.css">
+</head>
+<body>
+
+    <!-- ===== NAVBAR ===== -->
+    <header class="navbar" id="navbar">
+        <div class="navbar__inner">
+            <a href="index.html" class="navbar__logo">
+                <img src="img/logo_accent_cyan.svg" alt="ElectroTerm" />
+            </a>
+
+            <!-- Desktop nav -->
+            <nav class="navbar__nav" id="desktopNav">
+                <a href="nosotros.html" class="navbar__link navbar__link--active">Nosotros</a>
+                <a href="index.html#servicios" class="navbar__link">Servicios</a>
+                <a href="proyectos.html" class="navbar__link">Proyectos</a>
+                <a href="index.html#contacto" class="navbar__link navbar__link--cta">Contacto</a>
+            </nav>
+
+            <!-- Hamburger button -->
+            <button class="navbar__hamburger" id="hamburgerBtn" aria-label="Abrir menú" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+
+        <!-- Mobile nav -->
+        <nav class="navbar__mobile" id="mobileNav" aria-hidden="true">
+            <a href="nosotros.html" class="navbar__mobile-link">Nosotros</a>
+            <a href="index.html#servicios" class="navbar__mobile-link">Servicios</a>
+            <a href="proyectos.html" class="navbar__mobile-link">Proyectos</a>
+            <a href="index.html#contacto" class="navbar__mobile-link">Contacto</a>
+        </nav>
+    </header>
+
+    <!-- ===== SOBRE NOSOTROS ===== -->
+    <section class="nosotros" id="nosotros">
+        <div class="nosotros__inner">
+
+            <!-- Mobile: imagen arriba / Desktop: imagen derecha (order via CSS) -->
+            <div class="nosotros__image">
+                <img src="img/nosotros_img.png" alt="Equipo Electroterm - Ingeniería en climatización" />
+            </div>
+
+            <!-- Texto -->
+            <div class="nosotros__content">
+                <h1 class="nosotros__title">Sobre Nosotros</h1>
+                <hr class="nosotros__divider" />
+                <p class="nosotros__text">
+                    En Electroterm, contamos con más de 40 años de trayectoria desarrollando soluciones de climatización (HVAC) para proyectos residenciales, comerciales e industriales. Trabajamos junto a nuestros clientes, integrándonos desde etapas tempranas para optimizar costos, evitar interferencias en obra y asegurar sistemas que funcionen de manera eficiente en el largo plazo.
+                </p>
+                <p class="nosotros__text">
+                    Nuestro enfoque combina ingeniería y ejecución con un objetivo claro: mejorar el resultado final del proyecto y aportar previsibilidad en cada etapa.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ===== CTA ===== -->
+    <section class="nosotros-cta">
+        <div class="nosotros-cta__inner">
+            <h2 class="nosotros-cta__title">¿Tenés un proyecto en mente?</h2>
+            <p class="nosotros-cta__desc">
+                Contactanos para una consultoría técnica y descubrí cómo podemos optimizar tu sistema de climatización.
+            </p>
+            <a href="index.html#contacto" class="btn btn--dark">Hablemos de tu Proyecto</a>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+        <div class="footer__inner">
+            <div class="footer__brand">
+                <a href="index.html" class="footer__logo">
+                    <img src="img/logo_accent_cyan.svg" alt="ElectroTerm" />
+                </a>
+                <p>Más de 40 años diseñando sistemas de climatización de alta complejidad para hospitales, data centers, edificios e industrias.</p>
+            </div>
+
+            <div class="footer__col">
+                <h4 class="label-sm">SERVICIOS</h4>
+                <a href="index.html#servicios">Ingeniería</a>
+                <a href="index.html#servicios">Instalación y Puesta en Marcha</a>
+                <a href="index.html#servicios">Mantenimiento</a>
+                <a href="index.html#servicios">Distribución</a>
+            </div>
+
+            <div class="footer__col">
+                <h4 class="label-sm">SECTORES</h4>
+                <a href="proyectos.html">Salud</a>
+                <a href="proyectos.html">Industria</a>
+                <a href="proyectos.html">Educación</a>
+                <a href="proyectos.html">Gobierno</a>
+                <a href="proyectos.html">Corporativo</a>
+            </div>
+
+            <div class="footer__col">
+                <h4 class="label-sm">CONTACTO</h4>
+                <span>Av. Crámer 4250</span>
+                <span>Saavedra, CABA</span>
+                <span>(011) 4701-6154</span>
+                <span>electroterm@electroterm.com.ar</span>
+            </div>
+        </div>
+
+        <div class="footer__bottom">
+            <span class="label-sm">2026 | ELECTROTERM®</span>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
